@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+    height: 100%;
+
+} 
+.root{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto' !important;
+
+
+}
+.topBar{
+    width: 100%;
+    height: 67px;
+    background-color: #E5E5E5;
+    color: #E8833A;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto' !important;
+
+}
+.movies{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.logo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+img{
+    width: 129px;
+    height: 193px;
+}
+
+.movie{
+    width: 145px;
+    height: 209px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin: 5px 15px;
+    
+}
+
+.chooseMovie{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 67px;
+}
+
+.lds-hourglass {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #E5E5E5;
+    border-color: #E5E5E5 transparent #E5E5E5 transparent;
+    animation: lds-hourglass 1.2s infinite;
+  }
+  @keyframes lds-hourglass {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  
