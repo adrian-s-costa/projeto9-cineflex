@@ -1,10 +1,10 @@
+import axios from 'axios';
+
 const requisicao = axios.get("https://mock-api.driven.com.br/api/v5/cineflex/movies");
-const data = ''
+const dataM = ''
 
 requisicao.then(resposta => {
-    data = resposta.data 
+    dataM = resposta.data 
 });
 
-console.log(data)
-
-export default data;
+export default dataM;
