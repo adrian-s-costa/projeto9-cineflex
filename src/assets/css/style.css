@@ -129,6 +129,100 @@ img{
     height: 72px;
 }
 
+.sectionSeats{
+    width: 100%;
+}
+
+.seats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.seat{
+    width: 26px;
+    height: 26px;
+    background: #C3CFD9;
+    border: 1px solid #808F9D;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 9px 7px;
+}
+
+.inputs{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h6{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: -130px;
+}
+
+.input{
+    width: 30%;
+    width: 327px;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+}
+
+.g{
+    background:#8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+
+.y{
+    background:#FBE192;
+    border: 1px solid #F7C52B;
+}
+
+.sub{
+    display: flex;
+    flex-direction: column;
+}
+
+.sub1{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.subb{
+    text-align: center;
+    font-size: 60%;
+}
+
+.btnSeats{
+    margin-top: 57px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 130px;
+
+}
+
+.btnSeatsW{
+    width: 225px;
+    height: 42px;
+    background: #E8833A;
+    border: none;
+    color: white;
+}
+
 .lds-hourglass {
     display: inline-block;
     position: relative;

@@ -2,26 +2,6 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 
-
-function Section({weekday, date}){
-    return(
-        <>
-            <div className='sections'>
-                <h4>{weekday} - {date}</h4> 
-            </div>
-        </>
-    )
-}
-
-function Time({name}){
-    return(
-        <>
-            <button className='btn'>{name}</button>
-        </>
-    )
-}
-
-
 export default function MoviePage(){
     const {movieId} = useParams()
     const [movies, setMovie] = useState([])
