@@ -6,8 +6,8 @@ import axios from 'axios';
 function Movie({id, posterURL}) {
 	return(
         <div className='movie'>
-            <Link to={`/movie/${id}`}>
-                <img src={posterURL}/>
+            <Link to={`/movie/${id}/showtimes`}>
+                <img src={posterURL} alt={'a'}/>
             </Link>
         </div>
     )

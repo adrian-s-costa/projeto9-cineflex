@@ -66,6 +66,69 @@ img{
     padding-top: 67px;
 }
 
+.moviePage{
+    width: 100%;
+    padding-bottom: 117px;
+}
+
+.btns{
+    display: flex;
+    margin: 22px 0px;
+}
+
+.btn{
+    width: 83px;
+    height: 43px;
+    background: #E8833A;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin: 0px 4px;
+}
+
+.btn:hover{
+    transition: 0.4s;
+    color: #E8833A;
+    background: #FFFFFF;
+    border-radius: 3px;
+    border-color:#E8833A;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.sections{
+    padding-left: 24px;
+}
+
+.footer{
+    height: 117px;
+    background: #DFE6ED;
+    border: 1px solid #9EADBA;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    align-items: center;
+}
+
+.divFooter{
+    width: 64px;
+    height: 89px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 14px;
+}
+
+.imgFooter{
+    width: 48px;
+    height: 72px;
+}
+
 .lds-hourglass {
     display: inline-block;
     position: relative;
@@ -96,5 +159,5 @@ img{
     100% {
       transform: rotate(1800deg);
     }
-  }
+}
   
