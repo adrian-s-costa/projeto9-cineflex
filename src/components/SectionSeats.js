@@ -5,45 +5,57 @@ import { useState, useEffect } from 'react';
 
 
 export default function SectionSeats(){
-    
+    let idSelecSeats = []
     const [movie, setMovie] = useState([])
     const [seats, setSeats] = useState([])
     const { idSessao } = useParams()
     const [name, setName] = useState('')
     const [cpf, setCpf] = useState('')
-    const [seatsSelec, setSeatsSelec] = useState([])
+    const [ids, setIds] = useState([])
 
     function submitForm(event){
+        setIds(idSelecSeats)
         event.preventDefault()
+        
         const data = {
+            ids: ids,
             name: name,
             cpf: cpf
         }
         console.log(data)
     }
-
+    
     function Selecionar(seat){
         console.log(seat)
         if(seat.selected === false){
             console.log('selecionou')
             console.log(seatsData)
-            return seat.selected = true
+            seat.selected = true
+            SelectedSeats()
+            
         }else{
             console.log('deselecionou')
             console.log(seatsData)
-            return seat.selected = false
+            seat.selected = false
+            SelectedSeats()
+            
         }
+        
     }
     
+    function SelectedSeats(){
+        const selecSeats = seatsData.filter((s) => s.selected)
+        idSelecSeats = selecSeats.map((i) => i.id) 
+        console.log(idSelecSeats)
+    }
+
     useEffect(()=>{
         const promise = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${idSessao}/seats`)
-
+        
         promise.then((promise)=>{
             setSeats(promise.data.seats)
             setMovie(promise.data)
         })
-
-        
     }, [])
     
     let seatsData = seats.map(value => {
@@ -52,8 +64,6 @@ export default function SectionSeats(){
             selected: false,
         }
     })
-
-    console.log(seatsData)
 
     return(
         <>
@@ -97,7 +107,9 @@ export default function SectionSeats(){
                 <h6>CPF do comprador</h6>
                 <input className='input' required onChange={(e) => setCpf(e.target.value)} value={cpf}/>
                 <div className='btnSeats'>
-                    <button className='btnSeatsW' type='submit'>Reservar assentos</button>
+                    <Link to={`/sucesso`}>
+                        <button className='btnSeatsW' type='submit'> Reservar assentos </button>
+                    </Link>
                 </div>
             </form>
         </div>

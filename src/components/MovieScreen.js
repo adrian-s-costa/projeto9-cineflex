@@ -1,11 +1,7 @@
-
 import Movies from './Movie';
 
-
 export default function MovieScreen(){
-    
-    
-    
+ 
     return(
         <>
             <div className='chooseMovie'>

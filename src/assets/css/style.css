@@ -237,6 +237,11 @@ h6{
     border-width: 1px;
 }
 
+.successText{
+    color: #247A6B;
+    font-size: 24px;
+}
+
 .lds-hourglass {
     display: inline-block;
     position: relative;
