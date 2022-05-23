@@ -16,7 +16,7 @@ export default function SectionSeats(){
             setMovie(promise.data)
         })
     }, [])
-    console.log(movie)
+    console.log(movie.movie)
     return(
         <>
         <div className='sectionSeats'>
@@ -56,13 +56,17 @@ export default function SectionSeats(){
                 <button className='btnSeatsW'>Reservar assentos</button>
         </div>
         <footer className='footer'>
-            <div className='divFooter'>
-                <img src={movie.movie.posterURL} className='imgFooter'/>
-            </div>
-            <div className='movieInfo'>
-                <h4>{movie.movie.title}</h4>
-                <h4>{movie.day.weekday} - {movie.name}</h4>
-            </div>
+        {movie.length === 0 ? <div class="lds-hourglass"></div>:
+            <>
+                <div className='divFooter'>
+                    <img src={movie.movie.posterURL} className='imgFooter'/>
+                </div>
+                <div className='movieInfo'>
+                    <h4>{movie.movie.title}</h4>
+                    <h4>{movie.day.weekday} - {movie.name}</h4>
+                </div>
+            </>
+        }
         </footer>
     </>
     )

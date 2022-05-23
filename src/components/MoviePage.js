@@ -40,7 +40,7 @@ export default function MoviePage(){
                             </Link>
                         ))} 
                     </div>
-            </div>
+                </div>
             )
             } 
         </div>
